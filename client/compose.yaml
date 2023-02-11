@@ -1,0 +1,9 @@
+version: '3.9'
+
+services:
+  runtime:
+    container_name: client
+    build:
+      dockerfile: docker/Dockerfile
+      context: .
+    tty: true
