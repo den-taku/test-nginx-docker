@@ -1,0 +1,11 @@
+version: '3.9'
+
+services:
+  runtime:
+    container_name: server
+    build:
+      dockerfile: docker/Dockerfile
+      context: .
+    ports:
+      - 7890:7890
+    tty: true
