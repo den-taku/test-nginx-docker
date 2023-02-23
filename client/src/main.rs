@@ -11,7 +11,7 @@ async fn main() -> reqwest::Result<()> {
 
         let body = reqwest::get(if cfg!(target_os = "linux") {
             // docker
-            format!("http://host.docker.internal:7890/hello/{name}")
+            format!("http://server:7890/hello/{name}")
         } else {
             // local
             format!("http://127.0.0.1:7890/hello/{name}")

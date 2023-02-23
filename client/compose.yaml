@@ -7,3 +7,10 @@ services:
       dockerfile: docker/Dockerfile
       context: .
     tty: true
+    networks:
+      - prod
+
+networks:
+  prod:
+    name: production_network
+    external: true
